@@ -61,7 +61,9 @@ class NavBar extends  \yii\base\Widget
     	MainAsset::register($this->getView()); 
 
     	\yii\bootstrap\NavBar::begin([
-                'brandLabel' =>$this->brand['label'] ,
+                'brandLabel' =>isset($this->brand['logo']) ? 
+                        Html::img($this->brand['logo'], ['class'=>'pull-left img-responsive', 'style'=>'height:32px;padding-right:5px']).$this->brand['label'] :
+                        $this->brand['label']    ,
                 'brandUrl' => $this->brand['url'],
                 'options' => [
                     'class' => "navbar navbar-{$this->theme} navbar-fixed",
