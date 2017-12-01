@@ -11,6 +11,7 @@ class MainAsset extends AssetBundle
     public $css = [
         'css/pe-icon-7-stroke.css',
         'css/light-bootstrap-dashboard.css',
+        'css/widget.css',
     ];
 
     public $js = [
