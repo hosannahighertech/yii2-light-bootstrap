@@ -24,7 +24,9 @@ var navbar_initialized = false;
 
 $(document).ready(function(){
     window_width = $(window).width();
-
+    
+    //fix modal dialog issue
+    $('.modal').appendTo("body"); 
     // check if there is an image set for the sidebar's background
     lbd.checkSidebarImage();
 
