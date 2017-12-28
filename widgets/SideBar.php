@@ -101,6 +101,9 @@ class SideBar extends \yii\base\Widget
          		throw new InvalidParamException('Parameter url or title is missing');
          	else
          	{
+                if(isset($link['visible']) && $link['visible']===false)
+                    continue;
+                    
          		$icon = isset($link['icon']) ? "<i class='pe-7s-{$link['icon']}'></i>" : '';
          		$url = Html::a("{$icon} <p>{$link['title']}</p>", $link['url']);
 
