@@ -105,7 +105,7 @@ class SideBar extends \yii\base\Widget
                     continue;
                     
          		$icon = isset($link['icon']) ? "<i class='pe-7s-{$link['icon']}'></i>" : '';
-         		$url = Html::a("{$icon} <p>{$link['title']}</p>", $link['url']);
+         		$url = Html::a("{$icon} <p>{$link['title']}</p>", $link['url'], isset($link['options']) ? $link['options'] : []);
 
          		$content.= Html::tag('li', $url);
          	}

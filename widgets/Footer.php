@@ -57,7 +57,7 @@ class Footer extends  \yii\base\Widget
             foreach($this->links as $link)
             {
                 $widget.= Html::beginTag('li');
-                $widget.= Html::a($link['label'], $link['url']);
+                $widget.= Html::a($link['label'], $link['url'], isset($link['options']) ? $link['options'] : []);
                 $widget.= Html::endTag('li');
             }
             
